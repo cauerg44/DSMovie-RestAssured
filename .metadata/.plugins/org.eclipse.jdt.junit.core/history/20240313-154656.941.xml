@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="OrderControllerRA" project="dscommerce-restassured" tests="1" started="1" failures="1" errors="0" ignored="0">
+  <testsuite name="com.devsuperior.dscommerce.controllers.OrderControllerRA" time="2.933" displayname="OrderControllerRA" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.OrderControllerRA]">
+    <testcase name="findByIdShouldReturnOrderWhenIdExistsAndAdminLogged" classname="com.devsuperior.dscommerce.controllers.OrderControllerRA" time="2.933" displayname="findByIdShouldReturnOrderWhenIdExistsAndAdminLogged()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.OrderControllerRA]/[method:findByIdShouldReturnOrderWhenIdExistsAndAdminLogged()]">
+      <failure>java.lang.AssertionError: 1 expectation failed.
+JSON path status doesn't match.
+Expected: 2022-07-25T13:00:00Z
+  Actual: PAID
+&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)&#13;
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)&#13;
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)&#13;
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)&#13;
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)&#13;
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)&#13;
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)&#13;
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)&#13;
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)&#13;
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)&#13;
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:270)&#13;
+	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)&#13;
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:49)&#13;
+	at io.restassured.specification.ResponseSpecification$body$1.callCurrent(Unknown Source)&#13;
+	at io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:117)&#13;
+	at io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:244)&#13;
+	at com.devsuperior.dscommerce.controllers.OrderControllerRA.findByIdShouldReturnOrderWhenIdExistsAndAdminLogged(OrderControllerRA.java:52)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</failure>
+    </testcase>
+  </testsuite>
+</testrun>

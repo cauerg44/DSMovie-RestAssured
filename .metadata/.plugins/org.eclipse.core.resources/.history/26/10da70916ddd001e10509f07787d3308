@@ -1,0 +1,5 @@
+package com.devsuperior.dscommerce.controllers.it;
+
+public class ProductControllerIT {
+
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="OrderControllerRA" project="dscommerce-restassured" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.devsuperior.dscommerce.controllers.OrderControllerRA" time="2.704" displayname="OrderControllerRA" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.OrderControllerRA]">
+    <testcase name="findByIdShouldReturnOrderWhenIdExistsAndAdminLogged" classname="com.devsuperior.dscommerce.controllers.OrderControllerRA" time="2.703" displayname="findByIdShouldReturnOrderWhenIdExistsAndAdminLogged()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.OrderControllerRA]/[method:findByIdShouldReturnOrderWhenIdExistsAndAdminLogged()]"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,10 @@
+spring.profiles.active=test
+
+spring.jpa.open-in-view=false
+
+security.client-id=${CLIENT_ID:userid}
+security.client-secret=${CLIENT_SECRET:usersecret}
+
+security.jwt.duration=${JWT_DURATION:86400}
+
+cors.origins=${CORS_ORIGINS:http://localhost:3000,http://localhost:5173}

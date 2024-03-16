@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="UserControllerRA" project="dscommerce-restassured" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.devsuperior.dscommerce.controllers.UserControllerRA" time="4.302" displayname="UserControllerRA" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.UserControllerRA]">
+    <testcase name="getMeShouldReturnUnauthorizedWhenInvalidToken" classname="com.devsuperior.dscommerce.controllers.UserControllerRA" time="3.035" displayname="getMeShouldReturnUnauthorizedWhenInvalidToken()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.UserControllerRA]/[method:getMeShouldReturnUnauthorizedWhenInvalidToken()]"/>
+    <testcase name="getMeShouldReturnUserWhenClientLogged" classname="com.devsuperior.dscommerce.controllers.UserControllerRA" time="0.696" displayname="getMeShouldReturnUserWhenClientLogged()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.UserControllerRA]/[method:getMeShouldReturnUserWhenClientLogged()]"/>
+    <testcase name="getMeShouldReturnUserWhenAdminLogged" classname="com.devsuperior.dscommerce.controllers.UserControllerRA" time="0.571" displayname="getMeShouldReturnUserWhenAdminLogged()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.UserControllerRA]/[method:getMeShouldReturnUserWhenAdminLogged()]"/>
+  </testsuite>
+</testrun>

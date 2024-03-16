@@ -1,0 +1,22 @@
+{"properties": [
+  {
+    "name": "security.oauth2.client.client-secret",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.client-secret'"
+  },
+  {
+    "name": "security.jwt.duration",
+    "type": "java.lang.String",
+    "description": "A description for 'security.jwt.duration'"
+  },
+  {
+    "name": "security.oauth2.client.client-id",
+    "type": "java.lang.String",
+    "description": "A description for 'security.oauth2.client.client-id'"
+  }
+]}{
+    "name": "cors.origins",
+    "type": "java.lang.String",
+    "description": "A description for 'cors.origins'"
+  }
+]}

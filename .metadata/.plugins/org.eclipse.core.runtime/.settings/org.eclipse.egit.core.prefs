@@ -1,0 +1,4 @@
+GitRepositoriesView.GitDirectories=C\:\\ws-sts4\\dscommerce-mockmvc (1)\\.git;C\:\\ws-sts4\\.git;C\:\\ws-sts4\\dscatalog-cap3\\.git;C\:\\ws-sts4\\spring-boot-gmail\\.git;C\:\\ws-sts4\\java-expert-curso-desafios-devsuperior\\.git;C\:\\ws-sts4\\dscommerce-restassured\\.git;C\:\\spring-boot-oauth2-jwt-demo\\.git;
+GitRepositoriesView.GitDirectories.relative=dscommerce-mockmvc (1)\\.git;.git;dscatalog-cap3\\.git;spring-boot-gmail\\.git;java-expert-curso-desafios-devsuperior\\.git;dscommerce-restassured\\.git;C\:\\spring-boot-oauth2-jwt-demo\\.git;
+core_autoIgnoreDerivedResources=false
+eclipse.preferences.version=1

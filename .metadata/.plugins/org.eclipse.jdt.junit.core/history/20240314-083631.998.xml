@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CategoryControllerRA" project="dscommerce-restassured" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.devsuperior.dscommerce.controllers.CategoryControllerRA" time="2.549" displayname="CategoryControllerRA" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.CategoryControllerRA]">
+    <testcase name="findAllShouldReturnListOfCategories" classname="com.devsuperior.dscommerce.controllers.CategoryControllerRA" time="2.549" displayname="findAllShouldReturnListOfCategories()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.CategoryControllerRA]/[method:findAllShouldReturnListOfCategories()]"/>
+  </testsuite>
+</testrun>

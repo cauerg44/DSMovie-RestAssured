@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 4 resources" deleteContents="true" description="Delete 4 resources" element1="/Desafio Movieflix Casos de Uso" element2="/dscatalog-cap3" element3="/movieflix" element4="/spring-boot-gmail" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="4" stamp="1709227900180"/>
+</session>

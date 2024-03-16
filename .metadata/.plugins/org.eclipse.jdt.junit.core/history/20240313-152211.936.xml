@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="ProductControllerRA" project="dscommerce-restassured" tests="17" started="17" failures="2" errors="0" ignored="0">
+  <testsuite name="com.devsuperior.dscommerce.controllers.ProductControllerRA" time="24.134" displayname="ProductControllerRA" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.ProductControllerRA]">
+    <testcase name="insertReturnUnprocessableEntityWhenAdminLoggedAndProductHasNotCategory" classname="com.devsuperior.dscommerce.controllers.ProductControllerRA" time="3.988" displayname="insertReturnUnprocessableEntityWhenAdminLoggedAndProductHasNotCategory()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.ProductControllerRA]/[method:insertReturnUnprocessableEntityWhenAdminLoggedAndProductHasNotCategory()]"/>
+    <testcase name="findByIdShouldReturnProductWhenIdExists" classname="com.devsuperior.dscommerce.controllers.ProductControllerRA" time="0.626" displayname="findByIdShouldReturnProductWhenIdExists()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.ProductControllerRA]/[method:findByIdShouldReturnProductWhenIdExists()]"/>
+    <testcase name="deleteShouldReturnNoContentWhenIdExistsAndAdminLogged" classname="com.devsuperior.dscommerce.controllers.ProductControllerRA" time="1.327" displayname="deleteShouldReturnNoContentWhenIdExistsAndAdminLogged()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.ProductControllerRA]/[method:deleteShouldReturnNoContentWhenIdExistsAndAdminLogged()]"/>
+    <testcase name="findAllShouldReturnPagedProductsWithPriceGreaterThan2000" classname="com.devsuperior.dscommerce.controllers.ProductControllerRA" time="1.439" displayname="findAllShouldReturnPagedProductsWithPriceGreaterThan2000()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.ProductControllerRA]/[method:findAllShouldReturnPagedProductsWithPriceGreaterThan2000()]"/>
+    <testcase name="insertReturnUnprocessableEntityWhenAdminLoggedAndValidName" classname="com.devsuperior.dscommerce.controllers.ProductControllerRA" time="1.327" displayname="insertReturnUnprocessableEntityWhenAdminLoggedAndValidName()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.ProductControllerRA]/[method:insertReturnUnprocessableEntityWhenAdminLoggedAndValidName()]"/>
+    <testcase name="deleteShouldReturnForbiddenWhenClientLogged" classname="com.devsuperior.dscommerce.controllers.ProductControllerRA" time="1.317" displayname="deleteShouldReturnForbiddenWhenClientLogged()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.ProductControllerRA]/[method:deleteShouldReturnForbiddenWhenClientLogged()]"/>
+    <testcase name="deleteShouldReturnUnauthorizedWhenInvalidToken" classname="com.devsuperior.dscommerce.controllers.ProductControllerRA" time="1.316" displayname="deleteShouldReturnUnauthorizedWhenInvalidToken()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.ProductControllerRA]/[method:deleteShouldReturnUnauthorizedWhenInvalidToken()]">
+      <failure>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;401&gt; but was &lt;403&gt;.
+&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)&#13;
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)&#13;
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)&#13;
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)&#13;
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)&#13;
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)&#13;
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)&#13;
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)&#13;
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)&#13;
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)&#13;
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)&#13;
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)&#13;
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)&#13;
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)&#13;
+	at com.devsuperior.dscommerce.controllers.ProductControllerRA.deleteShouldReturnUnauthorizedWhenInvalidToken(ProductControllerRA.java:321)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="insertReturnUnprocessableEntityWhenAdminLoggedAndInvalidDescription" classname="com.devsuperior.dscommerce.controllers.ProductControllerRA" time="1.297" displayname="insertReturnUnprocessableEntityWhenAdminLoggedAndInvalidDescription()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.ProductControllerRA]/[method:insertReturnUnprocessableEntityWhenAdminLoggedAndInvalidDescription()]"/>
+    <testcase name="insertReturnUnprocessableEntityWhenAdminLoggedAndPriceIsNegative" classname="com.devsuperior.dscommerce.controllers.ProductControllerRA" time="1.303" displayname="insertReturnUnprocessableEntityWhenAdminLoggedAndPriceIsNegative()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.ProductControllerRA]/[method:insertReturnUnprocessableEntityWhenAdminLoggedAndPriceIsNegative()]"/>
+    <testcase name="deleteShouldReturnBadRequestWhenDependentIdAndAdminLogged" classname="com.devsuperior.dscommerce.controllers.ProductControllerRA" time="1.31" displayname="deleteShouldReturnBadRequestWhenDependentIdAndAdminLogged()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.ProductControllerRA]/[method:deleteShouldReturnBadRequestWhenDependentIdAndAdminLogged()]">
+      <failure>java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;404&gt; but was &lt;400&gt;.
+&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)&#13;
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)&#13;
+	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:73)&#13;
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrapNoCoerce.callConstructor(ConstructorSite.java:108)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)&#13;
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:512)&#13;
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)&#13;
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:696)&#13;
+	at io.restassured.internal.ResponseSpecificationImpl.this$2$validateResponseIfRequired(ResponseSpecificationImpl.groovy)&#13;
+	at jdk.internal.reflect.GeneratedMethodAccessor129.invoke(Unknown Source)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at org.codehaus.groovy.runtime.callsite.PlainObjectMetaMethodSite.doInvoke(PlainObjectMetaMethodSite.java:43)&#13;
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:198)&#13;
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:62)&#13;
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:185)&#13;
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:135)&#13;
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)&#13;
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:143)&#13;
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)&#13;
+	at com.devsuperior.dscommerce.controllers.ProductControllerRA.deleteShouldReturnBadRequestWhenDependentIdAndAdminLogged(ProductControllerRA.java:299)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)&#13;
+&#13;
+</failure>
+    </testcase>
+    <testcase name="insertReturnUnprocessableEntityWhenAdminLoggedAndPriceIsZero" classname="com.devsuperior.dscommerce.controllers.ProductControllerRA" time="1.3" displayname="insertReturnUnprocessableEntityWhenAdminLoggedAndPriceIsZero()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.ProductControllerRA]/[method:insertReturnUnprocessableEntityWhenAdminLoggedAndPriceIsZero()]"/>
+    <testcase name="deleteShouldReturnNotFoundWhenIdDoesNotExistsAndAdminLogged" classname="com.devsuperior.dscommerce.controllers.ProductControllerRA" time="1.22" displayname="deleteShouldReturnNotFoundWhenIdDoesNotExistsAndAdminLogged()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.ProductControllerRA]/[method:deleteShouldReturnNotFoundWhenIdDoesNotExistsAndAdminLogged()]"/>
+    <testcase name="findAllShouldReturnPageProductsWhenProductNameIsEmpty" classname="com.devsuperior.dscommerce.controllers.ProductControllerRA" time="1.237" displayname="findAllShouldReturnPageProductsWhenProductNameIsEmpty()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.ProductControllerRA]/[method:findAllShouldReturnPageProductsWhenProductNameIsEmpty()]"/>
+    <testcase name="insertShouldReturnUnauthorizedWhenInvalidToken" classname="com.devsuperior.dscommerce.controllers.ProductControllerRA" time="1.204" displayname="insertShouldReturnUnauthorizedWhenInvalidToken()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.ProductControllerRA]/[method:insertShouldReturnUnauthorizedWhenInvalidToken()]"/>
+    <testcase name="insertShouldReturnForbiddenWhenClientLogged" classname="com.devsuperior.dscommerce.controllers.ProductControllerRA" time="1.218" displayname="insertShouldReturnForbiddenWhenClientLogged()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.ProductControllerRA]/[method:insertShouldReturnForbiddenWhenClientLogged()]"/>
+    <testcase name="findAllShouldReturnPageProductsWhenProductNameIsNotEmpty" classname="com.devsuperior.dscommerce.controllers.ProductControllerRA" time="1.335" displayname="findAllShouldReturnPageProductsWhenProductNameIsNotEmpty()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.ProductControllerRA]/[method:findAllShouldReturnPageProductsWhenProductNameIsNotEmpty()]"/>
+    <testcase name="insertReturnProductCreatedWhenAdminLogged" classname="com.devsuperior.dscommerce.controllers.ProductControllerRA" time="1.349" displayname="insertReturnProductCreatedWhenAdminLogged()" uniqueid="[engine:junit-jupiter]/[class:com.devsuperior.dscommerce.controllers.ProductControllerRA]/[method:insertReturnProductCreatedWhenAdminLogged()]"/>
+  </testsuite>
+</testrun>

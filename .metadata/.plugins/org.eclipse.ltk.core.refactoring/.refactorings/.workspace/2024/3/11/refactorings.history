@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;dscommerce-restassured&apos;" deleteContents="true" description="Delete resource &apos;dscommerce-restassured&apos;" element1="/dscommerce-restassured" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1710416021245"/>&#x0A;<refactoring comment="Delete 2 resources" deleteContents="true" description="Delete 2 resources" element1="/dscommerce-mockmvc (1)" element2="/dscommerce-restassured" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="2" stamp="1710417572520"/>
+</session>
