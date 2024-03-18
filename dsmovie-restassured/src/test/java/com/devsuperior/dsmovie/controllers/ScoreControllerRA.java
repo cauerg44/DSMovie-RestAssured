@@ -2,42 +2,51 @@ package com.devsuperior.dsmovie.controllers;
 
 import static io.restassured.RestAssured.baseURI;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.hasItems;
-import static org.hamcrest.CoreMatchers.is;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import org.json.JSONException;
 import org.json.simple.JSONObject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import com.devsuperior.dsmovie.tests.TokenUtil;
 
 import io.restassured.http.ContentType;
 
 public class ScoreControllerRA {
 	
+	private Long nonExistingId, missingMovieId;
+	private String clientUsername, clientPassword, clientToken;
+	
 	private Map<String, Object> saveScoreInstance;
 	
 	@BeforeEach
-	void setUp() throws JSONException {
+	void setUp() throws Exception {
 		baseURI = "http://localhost:8080";
+		
+		clientUsername = "alex@gmail.com";
+		clientPassword = "123456";
+		clientToken = TokenUtil.obtainAccessToken(clientUsername, clientPassword);
+				
 		
 		saveScoreInstance = new HashMap<>();
 	}
 	
 	@Test
 	public void saveScoreShouldReturnNotFoundWhenMovieIdDoesNotExist() throws Exception {
-		Long nonExistingId = 100L;
+		nonExistingId = 100L;
 		
 	    saveScoreInstance.put("movieId", nonExistingId);
+	    saveScoreInstance.put("score", 4);
 	    JSONObject newScore = new JSONObject(saveScoreInstance);
 
 	    given()
-	        .body(newScore)
+	    	.header("Content-type", "application/json")
+	    	.header("Authorization", "Bearer " + clientToken)
 	        .contentType(ContentType.JSON)
 	        .accept(ContentType.JSON)
+	        .body(newScore)
 	    .when()
 	        .put("/scores")
 	    .then()
@@ -46,15 +55,18 @@ public class ScoreControllerRA {
 	
 	@Test
 	public void saveScoreShouldReturnUnprocessableEntityWhenMissingMovieId() throws Exception {
-		Long missingMovieId = null;
+		missingMovieId = null;
 		
 	    saveScoreInstance.put("movieId", missingMovieId);
+	    saveScoreInstance.put("score", 4);
 	    JSONObject newScore = new JSONObject(saveScoreInstance);
 
 	    given()
-	        .body(newScore)
+	    	.header("Content-type", "application/json")
+	    	.header("Authorization", "Bearer " + clientToken)
 	        .contentType(ContentType.JSON)
 	        .accept(ContentType.JSON)
+	        .body(newScore)
 	    .when()
 	        .put("/scores")
 	    .then()
@@ -63,6 +75,7 @@ public class ScoreControllerRA {
 	
 	@Test
 	public void saveScoreShouldReturnUnprocessableEntityWhenScoreIsLessThanZero() throws Exception {
+		saveScoreInstance.put("movieId", 1);
 		saveScoreInstance.put("score", -1);
 		JSONObject newScore = new JSONObject(saveScoreInstance);
 		
