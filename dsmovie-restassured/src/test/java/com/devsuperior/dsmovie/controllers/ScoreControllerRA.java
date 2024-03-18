@@ -1,11 +1,39 @@
 package com.devsuperior.dsmovie.controllers;
 
+import static io.restassured.RestAssured.baseURI;
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.hasItems;
+import static org.hamcrest.CoreMatchers.is;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.json.JSONException;
+import org.json.simple.JSONObject;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import io.restassured.http.ContentType;
 
 public class ScoreControllerRA {
 	
+	private Long nonExistingMovieId;
+	
+	private Map<String, Object> saveScoreInstance;
+	
+	@BeforeEach
+	void setUp() throws JSONException {
+		baseURI = "http://localhost:8080";
+		
+		nonExistingMovieId = 100L;
+		
+		saveScoreInstance = new HashMap<>();
+	}
+	
 	@Test
-	public void saveScoreShouldReturnNotFoundWhenMovieIdDoesNotExist() throws Exception {		
+	public void saveScoreShouldReturnNotFoundWhenMovieIdDoesNotExist() throws Exception {
+		
 	}
 	
 	@Test
@@ -13,6 +41,17 @@ public class ScoreControllerRA {
 	}
 	
 	@Test
-	public void saveScoreShouldReturnUnprocessableEntityWhenScoreIsLessThanZero() throws Exception {		
+	public void saveScoreShouldReturnUnprocessableEntityWhenScoreIsLessThanZero() throws Exception {
+		saveScoreInstance.put("score", -1);
+		JSONObject newScore = new JSONObject(saveScoreInstance);
+		
+		given()
+			.body(newScore)
+			.contentType(ContentType.JSON)
+			.accept(ContentType.JSON)
+		.when()
+			.put("/scores")
+		.then()
+			.statusCode(422);
 	}
 }
