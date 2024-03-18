@@ -18,26 +18,47 @@ import io.restassured.http.ContentType;
 
 public class ScoreControllerRA {
 	
-	private Long nonExistingMovieId;
-	
 	private Map<String, Object> saveScoreInstance;
 	
 	@BeforeEach
 	void setUp() throws JSONException {
 		baseURI = "http://localhost:8080";
 		
-		nonExistingMovieId = 100L;
-		
 		saveScoreInstance = new HashMap<>();
 	}
 	
 	@Test
 	public void saveScoreShouldReturnNotFoundWhenMovieIdDoesNotExist() throws Exception {
+		Long nonExistingId = 100L;
 		
+	    saveScoreInstance.put("movieId", nonExistingId);
+	    JSONObject newScore = new JSONObject(saveScoreInstance);
+
+	    given()
+	        .body(newScore)
+	        .contentType(ContentType.JSON)
+	        .accept(ContentType.JSON)
+	    .when()
+	        .put("/scores")
+	    .then()
+	        .statusCode(404);
 	}
 	
 	@Test
 	public void saveScoreShouldReturnUnprocessableEntityWhenMissingMovieId() throws Exception {
+		Long missingMovieId = null;
+		
+	    saveScoreInstance.put("movieId", missingMovieId);
+	    JSONObject newScore = new JSONObject(saveScoreInstance);
+
+	    given()
+	        .body(newScore)
+	        .contentType(ContentType.JSON)
+	        .accept(ContentType.JSON)
+	    .when()
+	        .put("/scores")
+	    .then()
+	        .statusCode(422);
 	}
 	
 	@Test
